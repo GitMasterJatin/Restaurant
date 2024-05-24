@@ -18,20 +18,14 @@ const Reservation = () => {
 
   const handleReservation = async (e) => {
     e.preventDefault();
-
-
-    //console.log(response) ;
-
-
     try {
       const response = await axios.post(
-        "http://localhost:4000/reservation/send",
+        "http://localhost:4000/api/v1/reservation/send",
         { firstName, lastName, email, phone, date, time },
         {
-            withCredentials: true,
+          withCredentials: true,
           headers: {
             "Content-Type": "application/json",
-
             // "Access-Control-Allow-Origin ":  "*"
           },
           withCredentials: true,
